@@ -8,8 +8,8 @@ But there are virtually no limits to extend or shape IRW.
 
 IRW has the some neat features:
 
- * It is quite extensible due to its component_design based on the Zope Component Architecture.
-    
+ * It is quite extensible due to its component design based on the Zope Component Architecture.
+
 
 ![plot](../master/doc/source/diagram_input.png)
 
