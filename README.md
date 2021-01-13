@@ -10,7 +10,7 @@ RW has the some neat features:
     
 ![plot](../master/doc/source/diagram_input.png)
 
-.. figure:: ./doc/source/diagram_input.png
+.. figure:: ../master/doc/source/diagram_input.png
      :width: 800px
      :align: center
      :alt: alternate text
