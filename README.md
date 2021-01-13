@@ -1,10 +1,10 @@
-Welcome to inqbus.rpi.widgets's documentation!
-==============================================
+Welcome to inqbus.rpi.widgets!
+==============================
 
-rpi.widgets (RW) is a basic framework for extensible GUI systems for the RaspberryPi or other systems with small displays.
-But there are no limits to extend or shape RW.
+inqbus.rpi.widgets (IRW) is a basic framework for extensible GUI systems for the RaspberryPi or other systems with small displays.
+But there are virtually no limits to extend or shape IRW.
 
-RW has the some neat features:
+IRW has the some neat features:
 
  * It is quite extensible due to its component_design.
     
@@ -44,6 +44,8 @@ RW has the some neat features:
  * Support of multiple displays in parallel
 
      You can write in parallel to all displays attached independed of their type
+     Each display reacts to the input in its own way. 
+     You attach two displays in parallel, a 4 line and a 2 line LCD display. You display a menu of 5 lines. The menu will be rendered in both diplays. Scrolling down the menu will after hitting line 2 force the two line display to scroll while the four line display will scroll first when line 4 is aproached. This is experimental!
 
  * Support of multiple input devices in parallel
 
