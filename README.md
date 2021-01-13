@@ -7,8 +7,8 @@ But there are no limits to extend or shape RW.
 RW has the some neat features:
 
     * It is quite extensible due to its :doc:`component_design`.
-
-![plot](.doc/source/diagram_input.png)
+    
+![plot](../master/doc/source/diagram_input.png)
 
 .. figure:: ./doc/source/diagram_input.png
      :width: 800px
