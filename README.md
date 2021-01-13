@@ -8,17 +8,17 @@ RW has the some neat features:
 
     * It is quite extensible due to its :doc:`component_design`.
 
-    .. figure:: ./doc/source/diagram_input.png
-        :width: 800px
-        :align: center
-        :alt: alternate text
-        :figclass: align-center
+.. figure:: ./doc/source/diagram_input.png
+     :width: 800px
+     :align: center
+     :alt: alternate text
+     :figclass: align-center
 
-    .. figure:: ./doc/source/diagram_output.png
-        :width: 800px
-        :align: center
-        :alt: alternate text
-        :figclass: align-center
+.. figure:: ./doc/source/diagram_output.png
+     :width: 800px
+     :align: center
+     :alt: alternate text
+     :figclass: align-center
 
     * Native support of a wide range of character displays
 
