@@ -30,16 +30,15 @@ IRW has the some neat features:
              ...
 
  * Character display emulation
+  - IRW has support for display emulation as
+    * Curses
+    * Console (e.g. for logging/debuggin of display changes)
 
-     IRW has support for display emulation as
-         * Curses
-         * Console (e.g. for logging/debuggin of display changes)
+ this enables you to develop your application on a desktop and then deploy it on the raspberry for debugging.
 
-     this enables you to develop your application on a desktop and then deploy it on the raspberry for debugging.
+ .. note::
 
-     .. note::
-
-         This is not a true emulation of the Hitachi! It is just a framebuffer emulation.
+     This is not a true emulation of the Hitachi! It is just a framebuffer emulation.
 
  * Support of multiple displays in parallel
 
