@@ -1,9 +1,0 @@
-inqbus.rpi.widgets
-==================
-
-.. toctree::
-   :maxdepth: {{ maxdepth }}
-{% for docname in docnames %}
-   {{ docname }}
-{%- endfor %}
-
