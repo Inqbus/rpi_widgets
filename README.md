@@ -1,17 +1,10 @@
 Welcome to inqbus.rpi.widgets's documentation!
 ==============================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+rpi.widgets (RW) is a basic framework for extensible GUI systems for the RaspberryPi or other systems with small displays.
+But there are no limits to extend or shape RW.
 
-
-:doc:`background`
-
-inqbus.rpi.widgets (IRW) is a basic framework for extensible GUI systems for the raspberryPi or other systems with small displays.
-But there are no limits to extend or shape IRW.
-
-IRW has the some neat features:
+RW has the some neat features:
 
     * It is quite extensible due to its :doc:`component_design`.
 
