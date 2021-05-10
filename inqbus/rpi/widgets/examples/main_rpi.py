@@ -9,10 +9,10 @@ from inqbus.rpi.widgets.text import Text
 
 from zope.component import getUtility
 
-import inqbus.rpi.widgets.gui  # noqa: W06111
-import inqbus.rpi.widgets.base.controller  # noqa: W06111
-import inqbus.rpi.widgets.base.focus  # noqa: W06111
-import inqbus.rpi.widgets.base.effects  # noqa: W06111
+import inqbus.rpi.widgets.gui  # noqa: F401
+import inqbus.rpi.widgets.base.controller  # noqa: F401
+import inqbus.rpi.widgets.base.focus  # noqa: F401
+import inqbus.rpi.widgets.base.effects  # noqa: F401
 
 
 def button_clicked():

@@ -8,8 +8,8 @@ from inqbus.rpi.widgets.select import Select
 from zope.component import getUtility
 
 
-import inqbus.rpi.widgets.gui  # noqa: W06111
-import inqbus.rpi.widgets.base.controller  # noqa: W06111
+import inqbus.rpi.widgets.gui  # noqa: F401
+import inqbus.rpi.widgets.base.controller  # noqa: F401
 
 
 gui = getUtility(IGUI)

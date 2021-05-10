@@ -8,9 +8,9 @@ from inqbus.rpi.widgets.page import Page
 from zope.component import getUtility
 
 # load the gui component
-import inqbus.rpi.widgets.gui  # noqa: W06111
+import inqbus.rpi.widgets.gui  # noqa: F401
 # load the base controller component
-import inqbus.rpi.widgets.base.controller  # noqa: W06111
+import inqbus.rpi.widgets.base.controller  # noqa: F401
 
 
 gui = getUtility(IGUI)
@@ -44,8 +44,6 @@ gauge2 = Gauge(
         fixed_pos=True,
 )
 page.add_widget(gauge2)
-
-
 
 sub_page = Page(
         pos_y=1,

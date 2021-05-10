@@ -9,6 +9,7 @@ from zope.component import getGlobalSiteManager
 from zope.interface import implementer
 from inqbus.rpi.widgets.base.log import logging
 
+
 @implementer(IGUI, IWidgetController)
 class GUI(object):
     """

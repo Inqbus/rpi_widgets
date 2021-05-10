@@ -254,7 +254,6 @@ class Widget(object):
         gui = getUtility(IGUI)
         return gui.focus == self
 
-
     def render(self, pos_x=None, pos_y=None):
         """
         Render the widget on all displays
@@ -303,4 +302,3 @@ class Widget(object):
         Initialize the widget
         """
         pass
-

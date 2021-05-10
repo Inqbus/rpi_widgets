@@ -4,7 +4,6 @@ from inqbus.rpi.widgets.button import Button, ButtonRenderer
 from inqbus.rpi.widgets.interfaces.interfaces import IRenderer, IWidgetController
 
 from inqbus.rpi.widgets.interfaces.widgets import (
-    IButtonWidget,
     ICheckboxWidget, )
 from zope.component import getGlobalSiteManager
 from zope.interface import Interface, implementer
@@ -31,6 +30,7 @@ class Checkbox(Button):
         else:
             result = 'Off'
         return result
+
 
 @implementer(IRenderer)
 class CheckboxRenderer(ButtonRenderer):
@@ -65,6 +65,7 @@ class CheckboxRenderer(ButtonRenderer):
 
         out_str = self.render_focus(content)
         return out_str
+
 
 @implementer(IWidgetController)
 class CheckboxController(WidgetController):

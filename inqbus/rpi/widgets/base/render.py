@@ -217,7 +217,6 @@ class Renderer(object):
         out_str = ' ' + content
         return out_str
 
-
     def clear(self):
         """
         Render an Empty Widget at the current position of the widget

@@ -88,7 +88,7 @@ class Effect(object):
             # check for stopping the blinking
             try:
                 # get a signal from the queue
-                _ = queue.get(block=False)
+                queue.get(block=False)
                 # if we got a signal break the loop/end the thread
                 break
             # if the queue is empty we have to continue

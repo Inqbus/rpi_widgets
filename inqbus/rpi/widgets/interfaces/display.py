@@ -62,9 +62,7 @@ class IDisplay(IDisplayHardware):
         """
         Scrolls the display one line up
         Returns:
-
         """
-
 
 
 class IConsoleDisplay(IDisplay):

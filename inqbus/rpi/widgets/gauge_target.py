@@ -90,7 +90,6 @@ class GaugeTargetRenderer(Renderer):
             else:
                 fc['operator'] = '>'
 
-
         out_str = """{label}:{reading:{format}}{operator}{level:{format}}{unit}""".format(**fc)  # noqa: E501
 
         out_str_focus = self.render_focus(out_str)

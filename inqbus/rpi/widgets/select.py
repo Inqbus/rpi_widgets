@@ -47,8 +47,6 @@ class Select(Lines):
         self._selected_idx = value
 
 
-
-
 @implementer(IRenderer)
 class SelectRenderer(Renderer):
     __used_for__ = (ISelectWidget, Interface)
@@ -58,12 +56,12 @@ class SelectRenderer(Renderer):
             if self.widget.pos_x is not None:
                 pos_x = self.widget.pos_x
             else:
-                pos_x =0
+                pos_x = 0
         if pos_y is None:
             if self.widget.pos_y is not None:
                 pos_y = self.widget.pos_y
             else:
-                pos_y =0
+                pos_y = 0
 
         if self.widget.selected_idx + pos_y >= self.display.height:
             offset = (self.display.height - pos_y - 1)
@@ -123,7 +121,6 @@ class SelectController(WidgetController):
         logging.debug(self.__class__.__name__ + ' done Down')
         return True
 
-
     def on_up(self, signal):
         """
         Handles up signals
@@ -161,12 +158,11 @@ class SelectController(WidgetController):
         result = None
         if self.widget.selected_idx+1 > self.widget.length-1:
             return result
-        for idx in range(self.widget.selected_idx+1, self.widget.length ):
+        for idx in range(self.widget.selected_idx+1, self.widget.length):
             if self.widget._content[idx]._can_focus:
                 result = idx
                 break
         return result
-
 
     def change_focus(self, old_focus_idx, new_focus_idx):
         # Remember old selection index
@@ -194,11 +190,12 @@ class SelectController(WidgetController):
         """
         result = False
         new_idx = self.next_focusable_widget_idx_down()
-        if new_idx is None :
+        if new_idx is None:
             return result
         result = self.widget._content[new_idx].controller.acquire_focus()
         self.widget.selected_idx = new_idx
         return True
+
 
 # Register the render adapter
 gsm = getGlobalSiteManager()
