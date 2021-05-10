@@ -1,6 +1,12 @@
 Welcome to inqbus.rpi.widgets!
 ==============================
 
+![license](https://img.shields.io/github/license/inqbus/rpi_widgets?style=flat-square)
+[![Build Status](https://travis-ci.org/inqbus/rpi_widgets.svg?branch=main)](https://travis-ci.org/inqbus/rpi_widgets)
+[![Coverage Status](https://coveralls.io/repos/github/inqbus/rpi_widgets/badge.svg?branch=main)](https://coveralls.io/github/inqbus/rpi_widgets?branch=main)
+[![PyPI](https://img.shields.io/pypi/v/rpi_widgets)](https://pypi.org/project/rpi_widgets/)
+[![Documantation](https://img.shields.io/readthedocs/rpi_widgets.svg)](https://rpi_widgets.readthedocs.io/en/latest/)
+
 inqbus.rpi.widgets (IRW) is a framework to build GUIs for the RaspberryPi or other systems with small character displays.
 But there are virtually no limits to extend or shape IRW.
 
