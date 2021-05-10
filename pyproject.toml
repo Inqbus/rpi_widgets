@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "inqbus_rpi_widgets"
+version = "0.1.0"
+description = ""
+authors = ["volker <volker.jaenisch@inqbus.de>"]
+
+packages = [
+    { include = "inqbus" },
+]
+
+[tool.poetry.dependencies]
+bitarray = "^2.1.0"
+python = "^3.7"
+coverage = "^5.5"
+pigpio-encoder = "^0.2.2"
+Sphinx = "^3.5.3"
+sphinx-rtd-theme = "^0.5.2"
+wrapt = "^1.12.1"
+"zope.component" = "^5.0.0"
+pynput = "^1.7.3"
+
+[tool.poetry.dev-dependencies]
+Xlib = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
