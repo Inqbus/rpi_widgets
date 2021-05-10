@@ -1,6 +1,6 @@
 from inqbus.rpi.widgets.button import Button
 from inqbus.rpi.widgets.config_default import FUCTION_CHARS_CURSES
-from inqbus.rpi.widgets.tests.base import LONG_LINE, SHORT_BUTTON, TestBase
+from tests.base import TestBase, SHORT_BUTTON, LONG_LINE
 
 
 class TestButton(TestBase):

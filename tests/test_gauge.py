@@ -1,5 +1,5 @@
 from inqbus.rpi.widgets.gauge import Gauge
-from inqbus.rpi.widgets.tests.base import TestBase
+from tests.base import TestBase
 
 
 class TestGauge(TestBase):

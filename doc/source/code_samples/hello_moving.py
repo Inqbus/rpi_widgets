@@ -1,13 +1,11 @@
 from time import sleep
-from inqbus.rpi.widgets.display.curses import DisplayCurses
-from inqbus.rpi.widgets.interfaces.interfaces import IGUI
-from inqbus.rpi.widgets.text import Text
+from inqbus.rpi.widgets import DisplayCurses
+from inqbus.rpi.widgets import IGUI
+from inqbus.rpi.widgets import Text
 from zope.component import getUtility
 
 # load the gui component
-import inqbus.rpi.widgets.gui # IMPORTANT!
 # load the base controller component
-import inqbus.rpi.widgets.base.controller # IMPORTANT!
 
 text = Text()
 text.content = 'Hello World'

@@ -1,5 +1,5 @@
 from inqbus.rpi.widgets.gauge_target import GaugeTarget
-from inqbus.rpi.widgets.tests.base import TestBase
+from tests.base import TestBase
 
 
 class TestGaugeTarget(TestBase):

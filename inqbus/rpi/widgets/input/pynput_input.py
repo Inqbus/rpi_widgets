@@ -4,7 +4,9 @@ from inqbus.rpi.widgets.base.input import BlockingInput
 from inqbus.rpi.widgets.base.signals import InputChar
 from inqbus.rpi.widgets.input.signals import KEYBOARD_SIGNALS
 from inqbus.rpi.widgets.interfaces.input import IBlockingInput
+
 from pynput import keyboard
+
 from zope.interface import implementer
 
 

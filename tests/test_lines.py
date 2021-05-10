@@ -1,5 +1,5 @@
 from inqbus.rpi.widgets.lines import Lines
-from inqbus.rpi.widgets.tests.base import TestBase
+from tests.base import TestBase
 
 
 class TestLines(TestBase):
