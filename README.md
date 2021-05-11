@@ -2,7 +2,7 @@ Welcome to inqbus.rpi.widgets!
 ==============================
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/Inqbus/rpi_widgets.svg?branch=master)](https://travis-ci.org/Inqbus/rpi_widgets)
-[![Coverage Status](https://coveralls.io/repos/github/inqbus/rpi_widgets/badge.svg?branch=main)](https://coveralls.io/github/inqbus/rpi_widgets?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/Inqbus/rpi_widgets/badge.svg?branch=master)](https://coveralls.io/github/Inqbus/rpi_widgets?branch=master)
 [![PyPI](https://img.shields.io/pypi/v/rpi_widgets)](https://pypi.org/project/rpi_widgets/)
 [![Documantation](https://img.shields.io/readthedocs/rpi_widgets.svg)](https://rpi_widgets.readthedocs.io/en/latest/)
 
