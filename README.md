@@ -10,7 +10,7 @@ inqbus.rpi.widgets (IRW) is a framework to build GUIs for the RaspberryPi or oth
 But there are virtually no limits to extend or shape IRW.
 
 **This is a work in progress! Please do not use this for production.**
-If you are interested in using or like to comment or contribute please open an issue.
+If you are interested in using or like to comment or contribute please open an issue or contact me via email.
 
 
 IRW has the some neat features:
