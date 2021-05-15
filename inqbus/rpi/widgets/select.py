@@ -52,16 +52,8 @@ class SelectRenderer(Renderer):
     __used_for__ = (ISelectWidget, Interface)
 
     def render(self, pos_x=None, pos_y=None):
-        if pos_x is None:
-            if self.widget.pos_x is not None:
-                pos_x = self.widget.pos_x
-            else:
-                pos_x = 0
-        if pos_y is None:
-            if self.widget.pos_y is not None:
-                pos_y = self.widget.pos_y
-            else:
-                pos_y = 0
+
+        pos_x, pos_y = self.render_position(pos_x, pos_y)
 
         if self.widget.selected_idx + pos_y >= self.display.height:
             offset = (self.display.height - pos_y - 1)
@@ -71,19 +63,18 @@ class SelectRenderer(Renderer):
             start_idx = 0
             end_idx = self.display.height - pos_y
         idx = start_idx
-        for line in self.widget.content[start_idx:end_idx]:
-            if self.widget.has_focus and idx == self.widget.selected_idx:
-                self.display.write_at_pos(
-                        pos_x,
-                        pos_y,
-                        self.special_chars['FOCUS_LEFT']
-                )
-            else:
-                self.display.write_at_pos(pos_x, pos_y, ' ')
+        for entry in self.widget.content[start_idx:end_idx]:
+
+            entry_renderer = entry.render_for_display(self.display, pos_x=pos_x + 1, pos_y=pos_y)
+
+            pos_y += entry_renderer.rendered_height
+            self.update_render_dimensions(entry_renderer)
+            # ToDo width handling
+
             idx += 1
+
         # return the coordinate after the content
-        # ToDo width, height handling
-        return pos_x, pos_y + 1
+        return self
 
 
 @implementer(IWidgetController)

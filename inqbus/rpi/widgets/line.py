@@ -55,10 +55,16 @@ class LineRenderer(Renderer):
     def render_content(self):
         """
         Render the line content
-
         """
-
-        return self.widget.content
+        # If the line ist static just return its content
+        result = self.widget.content
+        # If the line can be focused add a prefix
+        if self.widget.can_focus:
+            if self.widget.has_focus:
+                result = self.special_chars['FOCUS_LEFT'] + self.widget.content
+            else:
+                result = ' ' + self.widget.content
+        return result
 
 
 # Register the render adapter

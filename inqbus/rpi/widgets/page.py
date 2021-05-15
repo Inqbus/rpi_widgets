@@ -63,8 +63,14 @@ class PageRenderer(Renderer):
 
         """
         for widget in self.widget.content:
-            renderer = widget.render_for_display(self.display, pos_x=pos_x, pos_y=pos_y)
-            pos_y = renderer.rendered_pos_y + 1
+            renderer = widget.get_renderer_for_display(self.display)
+            pos_x, pos_y = renderer.render_position(pos_x, pos_y)
+
+            renderer.render(pos_x=pos_x, pos_y=pos_y)
+            try:
+                pos_y = renderer.rendered_pos_y + 1
+            except Exception as e:
+                pass
         # return the coordinate after the content
         # ToDo width, height handling
 

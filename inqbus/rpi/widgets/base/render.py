@@ -36,8 +36,8 @@ class Renderer(object):
         self.display = display
 
         self.was_rendered = False
-        self._rendered_width = None
-        self._rendered_height = None
+        self._rendered_width = 0
+        self._rendered_height = 0
         self._rendered_pos_x = None
         self._rendered_pos_y = None
 
@@ -190,14 +190,15 @@ class Renderer(object):
                             return result
 
         self.clear()
-        self.render_position(pos_x, pos_y)
+        pos_x , pos_y = self.render_position(pos_x, pos_y)
 
         render_content = self.render_content()
         self.display.write_at_pos(
-                self.rendered_pos_x,
-                self.rendered_pos_y,
+                pos_x,
+                pos_y,
                 render_content
         )
+        self.rendered_height = 1
         self.rendered_width = len(render_content)
         self.was_rendered = True
         return self
@@ -230,6 +231,14 @@ class Renderer(object):
                 self.rendered_width
         )
 
+    def update_render_dimensions(self, renderer):
+        try:
+            if self.rendered_pos_x + self.rendered_width <  renderer.rendered_pos_x + renderer.rendered_width:
+                self.rendered_width = renderer.rendered_pos_x + renderer.rendered_width - self.rendered_pos_x
+            if self.rendered_pos_y + self.rendered_height <  renderer.rendered_pos_y + renderer.rendered_height:
+                self.rendered_height = renderer.rendered_pos_y + renderer.rendered_height - self.rendered_pos_y
+        except Exception as e:
+            pass
 
 gsm = zope.component.getGlobalSiteManager()
 gsm.registerAdapter(Renderer, (IWidget, IDisplay), IRenderer)

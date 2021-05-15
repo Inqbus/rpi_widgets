@@ -254,6 +254,13 @@ class Widget(object):
         gui = getUtility(IGUI)
         return gui.focus == self
 
+    @property
+    def can_focus(self):
+        """
+        Returns if the widget can be focussed
+        """
+        return self._can_focus
+
     def render(self, pos_x=None, pos_y=None):
         """
         Render the widget on all displays

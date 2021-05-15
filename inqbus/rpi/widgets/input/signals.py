@@ -4,5 +4,5 @@ from inqbus.rpi.widgets.base.signals import InputDown, InputUp, InputClick
 KEYBOARD_SIGNALS = {
     'u': InputUp,
     'd': InputDown,
-    'c': InputClick
+    'c': InputClick,
 }

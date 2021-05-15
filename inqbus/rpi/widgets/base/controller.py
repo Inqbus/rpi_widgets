@@ -86,12 +86,16 @@ class WidgetController(object):
         Raises:
             SignalNotCatched if signal could not be dispatched
         """
-        result = self._signals[signal](signal)
+        try:
+            result = self._signals[signal](signal)
+        except KeyError:
+            raise SignalNotCatched('Unkown signal')
+
         if result:
             return result
         else:
             if self.widget.parent is not None:
-                return self.widget.parent.dispatch(signal)
+                return self.widget.parent.controller.dispatch(signal)
             else:
                 raise SignalNotCatched
 

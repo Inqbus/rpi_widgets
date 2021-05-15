@@ -28,11 +28,14 @@ class Lines(Widget):
                 # .. then transform it into a line instance
                 line = Line(fixed_pos=False)
                 line.render_on_content_change = False
+                line._can_focus = True
                 line.content = line_val
                 self._content.append(line)
             else:
                 # .. else just append to the content
+                line_val._can_focus = True
                 self._content.append(line_val)
+
 
         # if render on content_change
         if self.render_on_content_change:
@@ -71,25 +74,32 @@ class LinesRenderer(Renderer):
 
         self.clear()
         pos_x, pos_y = self.render_position(pos_x, pos_y)
+        prefix = ''
+        offset = 0
+        # If the line can be focused add a prefix
+        if self.widget.can_focus:
+            offset = 1
+            if self.widget.has_focus:
+                prefix = self.special_chars['FOCUS_LEFT']
+            else:
+                prefix = ' '
 
-        if self.widget.height == 1:
-            self.widget.content[0].render_for_display(
+        for line in self.widget.content:
+            self.display.write_at_pos(
+                pos_x,
+                pos_y,
+                prefix
+            )
+            renderer = line.render_for_display(
                     self.display,
-                    pos_x=pos_x,
+                    pos_x=pos_x + offset,
                     pos_y=pos_y
             )
-        else:
-            for line in self.widget.content:
-                line.render_for_display(
-                        self.display,
-                        pos_x=pos_x,
-                        pos_y=pos_y
-                )
-                pos_y += 1
-
+            pos_y += renderer.rendered_height
+            self.update_render_dimensions(renderer)
         # return the coordinate after the content
         # ToDo width, height handling
-        return pos_x, pos_y + 1
+        return self
 
     def clear(self):
         """
