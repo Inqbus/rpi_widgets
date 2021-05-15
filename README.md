@@ -1,9 +1,8 @@
 Welcome to inqbus.rpi.widgets!
 ==============================
-
-![license](https://img.shields.io/github/license/inqbus/rpi_widgets?style=flat-square)
-[![Build Status](https://travis-ci.org/inqbus/rpi_widgets.svg?branch=main)](https://travis-ci.org/inqbus/rpi_widgets)
-[![Coverage Status](https://coveralls.io/repos/github/inqbus/rpi_widgets/badge.svg?branch=main)](https://coveralls.io/github/inqbus/rpi_widgets?branch=main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/Inqbus/rpi_widgets.svg?branch=master)](https://travis-ci.org/Inqbus/rpi_widgets)
+[![Coverage Status](https://coveralls.io/repos/github/Inqbus/rpi_widgets/badge.svg?branch=master)](https://coveralls.io/github/Inqbus/rpi_widgets?branch=master)
 [![PyPI](https://img.shields.io/pypi/v/rpi_widgets)](https://pypi.org/project/rpi_widgets/)
 [![Documantation](https://img.shields.io/readthedocs/rpi_widgets.svg)](https://rpi_widgets.readthedocs.io/en/latest/)
 
@@ -11,7 +10,7 @@ inqbus.rpi.widgets (IRW) is a framework to build GUIs for the RaspberryPi or oth
 But there are virtually no limits to extend or shape IRW.
 
 **This is a work in progress! Please do not use this for production.**
-If you are interested in using or like to comment or contribute please open an issue.
+If you are interested in using or like to comment or contribute please open an issue or contact me via email.
 
 
 IRW has the some neat features:
