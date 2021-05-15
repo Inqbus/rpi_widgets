@@ -12,6 +12,7 @@ from zope.component import getUtility
 from zope.interface import implementer
 
 
+
 @implementer(IInput)
 class InputCurses(Input):
     """
@@ -21,14 +22,16 @@ class InputCurses(Input):
     def __init__(self, curses_display=None, keyboard_signals=None):
 
         if not curses_display:
-            self.display = curses.newwin(1, 1, 0, 0)
+            self.curses_window = curses.newwin(1, 1, 0, 0)
         else:
-            self.display = curses_display
+            self.curses_window = curses_display
 
         if keyboard_signals:
             self.keyboard_signals = keyboard_signals
         else:
             self.keyboard_signals = KEYBOARD_SIGNALS
+
+        curses.noecho()
 
     def init(self):
         gui = getUtility(IGUI)
@@ -51,7 +54,7 @@ class InputCurses(Input):
 
     def run_curses(self):
         while True:
-            key = self.display.getkey()
+            key = self.curses_window.getkey()
             signal = self.key2signal(key)
             try:
                 self.gui.dispatch(signal)

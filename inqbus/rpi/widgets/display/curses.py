@@ -55,7 +55,7 @@ class DisplayCurses(Display):
             pass
 
     def write(self, line):
-        # chack for range violations
+        # check for range violations
         if not self.initialized:
             return
         if not self.pos_y < self.height:
