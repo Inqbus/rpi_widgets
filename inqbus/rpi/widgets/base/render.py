@@ -150,6 +150,8 @@ class Renderer(object):
         self._rendered_height = value
 
     def render_position(self, pos_x, pos_y):
+        if self.was_rendered:
+            return self.rendered_pos_x, self.rendered_pos_y
         if self.widget.fixed_pos:
             self.set_position(self.widget.pos_x, self.widget.pos_y)
         else:

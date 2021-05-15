@@ -82,6 +82,7 @@ class GUI(object):
         logging.info('Focus change from %s to %s' % (self.focus, widget))
         self._focus = widget
 
+
     def init(self):
         """
         Initialize the GUI

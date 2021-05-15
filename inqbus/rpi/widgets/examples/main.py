@@ -15,13 +15,14 @@ import inqbus.rpi.widgets.base.controller  # noqa: F401
 
 gui = getUtility(IGUI)
 
+display2 = DisplayCurses(terminal_pos_x=30, height=8)
+gui.add_display(display2)
+
+
 display = DisplayCurses()
 display.init()
 gui.add_display(display)
 
-display2 = DisplayCurses(terminal_pos_x=30, height=2)
-display2.init()
-gui.add_display(display2)
 
 
 #input = PynputInput()
@@ -51,8 +52,11 @@ layout.add_widget(select)
 
 gui.set_layout(layout)
 
-gui.focus = select
+gui.focus = select.content[0]
+select.render()
 
 gui.init()
+
+gui.render()
 
 gui.run(blocking=False)

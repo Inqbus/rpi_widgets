@@ -51,11 +51,7 @@ class WidgetController(object):
         """
         logging.debug(self.__class__.__name__ + ' done no Down')
 
-        if self.widget.selected_idx < self.widget.length - 1:
-            self.widget.selected_idx += 1
-            return True
-        else:
-            return False
+        return False
 
     def on_up(self, signal):
         """
@@ -67,13 +63,9 @@ class WidgetController(object):
         Returns:
             True if signal was handled, False otherwise
         """
-        logging.debug(self.__class__.__name__ + ' done Up')
+        logging.debug(self.__class__.__name__ + ' done on Up')
 
-        if self.widget.selected_idx > 0:
-            self.widget.selected_idx -= 1
-            return True
-        else:
-            return False
+        return False
 
     def dispatch(self, signal):
         """
