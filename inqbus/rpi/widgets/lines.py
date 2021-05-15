@@ -18,6 +18,10 @@ class Lines(Widget):
     def init_content(self):
         self._content = []
 
+    def add_content(self, content):
+        self._content.append(content)
+        content.parent = self
+
     def handle_new_content(self, value):
         # accept only a list of ether strings or Line Instances
         assert isinstance(value, list)
@@ -30,12 +34,11 @@ class Lines(Widget):
                 line.render_on_content_change = False
                 line._can_focus = True
                 line.content = line_val
-                self._content.append(line)
+                self.add_content(line)
             else:
                 # .. else just append to the content
                 line_val._can_focus = True
-                self._content.append(line_val)
-
+                self.add_content(line_val)
 
         # if render on content_change
         if self.render_on_content_change:
